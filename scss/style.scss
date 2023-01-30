@@ -33,6 +33,7 @@ body {
     background-image: url(../img/bg-1.svg);
     background-size: auto;
     background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 main {
@@ -43,7 +44,7 @@ main {
     &__img {
     
         img {
-            width: 30vw;
+            height: 100vh;
             
         }        
     }
@@ -70,25 +71,27 @@ main {
 		text-align: center;
 		color: #fff;
 		font-size: calc(20px + (64 - 20) * ((100vw - 540px) / (1920 - 540)));
+        
+    
 	}
 }
 
 .information {
-    margin: 50px;
+    margin: calc(16px + (50 - 16) * ((100vw - 540px) / (1920 - 540)));
     &__name {
-        font-size: 48px;
+        font-size: calc(24px + (48 - 24) * ((100vw - 540px) / (1920 - 540)));
         font-weight: 500;
 
     }
     &__city {
         margin: 20px 0 0 0;
-        font-size: 24px;
+        font-size: calc(18px + (24 - 18) * ((100vw - 540px) / (1920 - 540)));
         font-weight: 500;
     }
 }
 
 .links {
-    margin: 50px 0 0 0;
+    margin-top: calc(16px + (50 - 16) * ((100vw - 540px) / (1920 - 540)));
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -125,8 +128,8 @@ main {
 }
 
 .tags {
-    margin: 50px 0 0 0;
-    font-size: 32px;
+    margin-top: calc(16px + (50 - 16) * ((100vw - 540px) / (1920 - 540)));
+    font-size: calc(16px + (32 - 16) * ((100vw - 540px) / (1920 - 540)));
     p {
 
     }
@@ -134,10 +137,10 @@ main {
         display: flex;
         flex-wrap: wrap;
         gap: 25px;
-        margin: 20px 0 0 0;
+        margin-top: calc(10px + (20 - 10) * ((100vw - 540px) / (1920 - 540)));
         
         li {
-            padding: 14px 55px;
+            padding: calc(8px + (14 - 8) * ((100vw - 540px) / (1920 - 540))) calc(35px + (55 - 35) * ((100vw - 540px) / (1920 - 540)));
             background-color: #414141;
             border-radius: 45px;
             color: white;
@@ -148,39 +151,45 @@ main {
 }
 
 .about {
-    margin: 50px 0 0 0;
+    margin-top: calc(16px + (50 - 16) * ((100vw - 540px) / (1920 - 540)));
+    
+    span {
+        font-size: calc(16px + (32 - 16) * ((100vw - 540px) / (1920 - 540)));
+        line-height: calc(19px + (38 - 19) * ((100vw - 540px) / (1920 - 540)));
+    }
     p {
-        white-space: pre-wrap;
-        font-size: 32px;
-        line-height: 37.5px;
+        text-indent: 30px;
+        font-size: calc(16px + (32 - 16) * ((100vw - 540px) / (1920 - 540)));
+        line-height: calc(19px + (38 - 19) * ((100vw - 540px) / (1920 - 540)));
     }
 }
 
 .form {
-    margin: 50px 0 0 0;
+    margin-top: calc(16px + (50 - 16) * ((100vw - 540px) / (1920 - 540)));
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
     
     label {
+        margin-top: calc(10px + (20 - 10) * ((100vw - 540px) / (1920 - 540)));
             
         .form__input {
             padding: 14px 16px;
-            width: 338px;
-            height: 66px;
-            font-size: 32px;
+            width: calc(185px + (338 - 185) * ((100vw - 540px) / (1920 - 540)));
+            height: calc(35px + (66 - 35) * ((100vw - 540px) / (1920 - 540)));
+            font-size: calc(16px + (32 - 16) * ((100vw - 540px) / (1920 - 540)));
             border-radius: 11px;
             
         }        
     }
     .form__button {
-        width: 702px;
-        height: 66px;
+        width: calc(390px + (702 - 390) * ((100vw - 540px) / (1920 - 540)));
+        height: calc(35px + (66 - 35) * ((100vw - 540px) / (1920 - 540)));
         background-color: #121212;
         border-radius: 11px;
         color: white;
-        font-size: 32px;
-        padding: 14px;
+        font-size: calc(16px + (32 - 16) * ((100vw - 540px) / (1920 - 540)));
+        padding: calc(8px + (14 - 8) * ((100vw - 540px) / (1920 - 540)));
         
         &:hover {
             background-color: #414141;
@@ -195,19 +204,81 @@ main {
 }
 
 @media (max-device-width: 992px) and (min-device-width: 540px) {
-    .about {
-        font-size: 20px;
-    }
+    .tags__list li:nth-child(4) {
+        margin-top: -10px;
+        }
 
-    p, h2, li, button {
-        font-size: calc(20px + (48 - 20) * ((100vw - 540px) / (1920 - 540)));
+    .tags__list li:nth-child(5) {
+        margin-top: -10px;
+        }
     }
-}
 
 @media (max-device-width: 540px) {
+
+    body {
+        min-height: 100vh;
+    }
     main {
         display: flex;
         flex-wrap: wrap;
+        padding: 0 10vw;
     }
+
+    .form {
+        margin: 0 auto;
+    }
+    .wrapper {
+        margin: 0 auto;
+    }
+    .wrapper__img {
+            
+        img {
+            height: 689px;
+            width: 390px;
+            
+            max-width: 95vw;
+        }
+    }
+
+    .tags__list li:nth-child(4) {
+        margin-top: -10px;
+        }
+
+    .tags__list li:nth-child(5) {
+        margin-top: -10px;
+        } 
 }
 
+@media (max-width: 1260px) and (min-width: 993px) {
+    
+    .form {
+        
+    }
+    .form__button {
+    max-width: calc(185px + (338 - 185) * ((100vw - 540px) / (1920 - 540)));
+    max-height: calc(35px + (66 - 35) * ((100vw - 540px) / (1920 - 540)));
+    
+    
+}
+
+}
+
+@media (max-width: 530px) {
+    .form__button {
+        max-width: calc(185px + (338 - 185) * ((100vw - 540px) / (1920 - 540)));
+        max-height: calc(35px + (66 - 35) * ((100vw - 540px) / (1920 - 540)));
+    } 
+}
+
+@media (max-width: 493px) {
+    .tags__list li:nth-child(3) {
+        margin-top: -10px;
+        }
+    .tags__list li:nth-child(4) {
+            margin-top: -10px;
+        }
+    
+    .tags__list li:nth-child(5) {
+            margin-top: -10px;
+        } 
+}
